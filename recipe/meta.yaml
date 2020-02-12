@@ -7,7 +7,7 @@ package:
 source:
   fn: chaospy-{{ version }}.tar.gz
   url: https://github.com/jonathf/chaospy/archive/v{{ version }}.tar.gz
-  sha256: f45675789ec1dd564a2f17395e1447e1f64d26a078fd0fad120953517453cfec
+  sha256: 751955ffa77857e4409a8d233bf7b4f47b1dbf564f18ec27e3c8ed2457559462
 
 build:
   number: 0
