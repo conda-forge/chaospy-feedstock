@@ -28,7 +28,6 @@ requirements:
     - scikit-learn
     - numpoly
 
-
 test:
   imports:
     - chaospy
