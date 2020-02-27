@@ -1,4 +1,4 @@
-{% set version = "3.0.12" %}
+{% set version = "3.2.4" %}
 
 package:
   name: chaospy
@@ -7,24 +7,25 @@ package:
 source:
   fn: chaospy-{{ version }}.tar.gz
   url: https://github.com/jonathf/chaospy/archive/v{{ version }}.tar.gz
-  sha256: 751955ffa77857e4409a8d233bf7b4f47b1dbf564f18ec27e3c8ed2457559462
+  sha256: 4a6bf09374002f853e56d3600efc198160a51c7c857c56334c163f6c40d3f8a1
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
-  build:
-    - python
-    - setuptools
+  host:
+    - python >=3.5
+    - poetry
     - pip
   run:
-    - python
+    - python >=3.5
     - networkx
     - numpy
     - scipy
     - scikit-learn
+    - numpoly
 
 test:
   imports:
