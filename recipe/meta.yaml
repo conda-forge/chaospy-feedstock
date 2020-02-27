@@ -15,16 +15,17 @@ build:
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
-  build:
-    - python
-    - setuptools
+  host:
+    - python >=3.5
+    - poetry
     - pip
   run:
-    - python
+    - python >=3.5
     - networkx
     - numpy
     - scipy
     - scikit-learn
+    - numpoly
 
 test:
   imports:
