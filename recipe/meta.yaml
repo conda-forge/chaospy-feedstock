@@ -1,4 +1,4 @@
-{% set version = "3.3.7" %}
+{% set version = "3.3.8" %}
 
 package:
   name: chaospy
@@ -7,7 +7,7 @@ package:
 source:
   fn: chaospy-{{ version }}.tar.gz
   url: https://github.com/jonathf/chaospy/archive/v{{ version }}.tar.gz
-  sha256: a848b5746a257c66a97e1e9eb0d010e16556b616d06ce60e21dde9866d347c63
+  sha256: 6f488ff6e3205bcf5efe26c324a32be39457c5ac5127a876fc11ae5d3a69267d
 
 build:
   number: 0
