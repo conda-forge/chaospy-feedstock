@@ -5,11 +5,9 @@ Home: https://github.com/jonathf/chaospy
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/chaospy-feedstock/blob/master/LICENSE.txt)
 
 Summary: Toolbox for performing uncertainty quantification
-
-
 
 Current build status
 ====================
