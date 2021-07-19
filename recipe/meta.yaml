@@ -1,4 +1,4 @@
-{% set version = "3.3.8" %}
+{% set version = "4.2.5" %}
 
 package:
   name: chaospy
@@ -16,16 +16,15 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.7
     - poetry
     - pip
   run:
-    - python >=3.5
-    - networkx
+    - python >=3.7
     - numpy
     - scipy
     - scikit-learn
-    - numpoly
+    - numpoly ==1.2.3
 
 test:
   imports:
