@@ -24,7 +24,7 @@ requirements:
     - numpy
     - scipy
     - scikit-learn
-    - numpoly
+    - numpoly ==1.0.6
 
 test:
   imports:
