@@ -16,16 +16,16 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.7,<4
     - poetry
     - pip
   run:
-    - python >=3.5
+    - python >=3.7,<4
     - networkx
     - numpy
     - scipy
-    - scikit-learn
-    - numpoly
+    - scikit-learn >=0.24.2,<1
+    - numpoly >=1.1.2,<2
 
 test:
   imports:
