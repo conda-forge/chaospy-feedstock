@@ -1,4 +1,4 @@
-{% set version = "3.3.8" %}
+{% set version = "4.2.7" %}
 
 package:
   name: chaospy
@@ -7,7 +7,7 @@ package:
 source:
   fn: chaospy-{{ version }}.tar.gz
   url: https://github.com/jonathf/chaospy/archive/v{{ version }}.tar.gz
-  sha256: 6f488ff6e3205bcf5efe26c324a32be39457c5ac5127a876fc11ae5d3a69267d
+  sha256: 2685506a44433f7c52930797f0bf0293cb362723916a005a2e322cfa1823971e
 
 build:
   number: 0
@@ -16,16 +16,16 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.7
     - poetry
     - pip
   run:
-    - python >=3.5
+    - python >=3.7
     - networkx
-    - numpy
+    - numpy >=1.20
     - scipy
     - scikit-learn
-    - numpoly
+    - numpoly >=1.2.5
 
 test:
   imports:
@@ -47,3 +47,4 @@ about:
 extra:
   recipe-maintainers:
     - jschueller
+    - gallardoalba
