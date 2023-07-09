@@ -25,6 +25,7 @@ requirements:
     - scipy
     - scikit-learn
     - numpoly >=1.2.5
+    - importlib_metadata
 
 test:
   imports:
