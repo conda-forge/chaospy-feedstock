@@ -1,13 +1,12 @@
-{% set version = "4.3.2" %}
+{% set version = "4.3.13" %}
 
 package:
   name: chaospy
   version: {{ version }}
 
 source:
-  fn: chaospy-{{ version }}.tar.gz
-  url: https://github.com/jonathf/chaospy/archive/v{{ version }}.tar.gz
-  sha256: 05f3fc6c0fd75c831d67f97478bcc6431e7f86d5dbdee0a880695243a5aea2ee
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6bd5d487377dbba3c2ef69dd3b1b45ad3c55c1be3d94155db62f3aff569e4c57
 
 build:
   number: 0
@@ -24,7 +23,7 @@ requirements:
     - numpy
     - scipy
     - scikit-learn
-    - numpoly ==1.2.3
+    - numpoly >=1.2.5
 
 test:
   imports:
