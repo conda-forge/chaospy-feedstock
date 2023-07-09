@@ -1,7 +1,8 @@
+{% set name = "chaospy" %}
 {% set version = "4.3.13" %}
 
 package:
-  name: chaospy
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
