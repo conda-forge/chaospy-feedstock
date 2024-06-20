@@ -1,13 +1,13 @@
-{% set version = "3.3.9" %}
+{% set name = "chaospy" %}
+{% set version = "4.3.13" %}
 
 package:
-  name: chaospy
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: chaospy-{{ version }}.tar.gz
-  url: https://github.com/jonathf/chaospy/archive/v{{ version }}.tar.gz
-  sha256: 75c58bdbd3181d0e87eb8077680d20aff9f0ef954fe9b58c233005d386187c7b
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 6bd5d487377dbba3c2ef69dd3b1b45ad3c55c1be3d94155db62f3aff569e4c57
 
 build:
   number: 0
@@ -16,15 +16,16 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.7
     - poetry
     - pip
   run:
-    - python >=3.5
-    - numpy
+    - python >=3.7
+    - numpy >=1.20
     - scipy
     - scikit-learn
-    - numpoly ==1.0.6
+    - numpoly >=1.2.5
+    - importlib_metadata
 
 test:
   imports:
