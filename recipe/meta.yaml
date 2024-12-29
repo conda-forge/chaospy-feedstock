@@ -10,17 +10,17 @@ source:
   sha256: 75c58bdbd3181d0e87eb8077680d20aff9f0ef954fe9b58c233005d386187c7b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
     - poetry
     - pip
   run:
-    - python >=3.5
+    - python >={{ python_min }}
     - numpy
     - scipy
     - scikit-learn
@@ -33,6 +33,7 @@ test:
     - tests
   requires:
     - pytest-runner
+    - python {{ python_min }}
   commands:
     - py.test
 
