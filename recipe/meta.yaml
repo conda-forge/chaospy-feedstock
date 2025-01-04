@@ -1,13 +1,15 @@
-{% set version = "3.3.9" %}
+{% set name = "chaospy" %}
+{% set version = "4.3.18" %}
+{% set python_min = "3.5" %}
 
 package:
-  name: chaospy
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
   fn: chaospy-{{ version }}.tar.gz
   url: https://github.com/jonathf/chaospy/archive/v{{ version }}.tar.gz
-  sha256: 75c58bdbd3181d0e87eb8077680d20aff9f0ef954fe9b58c233005d386187c7b
+  sha256: 7b5f1401935dac616f362941e216b96636edb47cb0fe4d85901a88d4f219e13b
 
 build:
   number: 0
@@ -16,15 +18,16 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_min }}
+    - setuptools >=40.9.0
     - poetry
     - pip
   run:
-    - python >=3.5
-    - numpy
+    - python >={{ python_min }}
+    - numpy >=1.20
     - scipy
     - scikit-learn
-    - numpoly ==1.0.6
+    - numpoly >=1.2.12
 
 test:
   imports:
@@ -32,6 +35,8 @@ test:
   source_files:
     - tests
   requires:
+    - python {{ python_min }}
+    - pip
     - pytest-runner
   commands:
     - py.test
