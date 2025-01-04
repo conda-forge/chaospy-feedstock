@@ -1,6 +1,6 @@
 {% set name = "chaospy" %}
 {% set version = "4.3.18" %}
-{% set python_min = "3.5" %}
+{% set python_min = "3.7" %}
 
 package:
   name: {{ name|lower }}
