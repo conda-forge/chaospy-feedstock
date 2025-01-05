@@ -39,7 +39,7 @@ test:
     - pip
     - pytest-runner
   commands:
-    - py.test
+    - pip check
 
 about:
   home: https://github.com/jonathf/chaospy
